@@ -1,0 +1,42 @@
+{
+  "Index": {
+    "title": "Sistema de Gestion de Bots Sociales",
+    "description": "Plataforma integral para la gestioun asisitentes virtuales via whatsapp,,,"
+  },
+  "Auth": {
+    "login": "Iniciar sesion",
+    "register": "Registrarse",
+    "email": "Correo electronico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidou su contraseña?",
+    "noAccount": "¿No tiene una cuenta?",
+    "createAccount": "Crear cuenta",
+    "alreadyHaveAccount": "u00bfYa tiene una cuenta?",
+    "loginHere": "Inicie sesioun aquu00ed"
+  },
+  "Dashboard": {
+    "welcome": "Bienvenido al Dashboard",
+    "visitors": "Visitantes",
+    "correspondence": "Correspondencia",
+    "incidents": "Incidentes",
+    "viewVisitors": "Ver visitantes",
+    "viewCorrespondence": "Ver correspondencia",
+    "viewIncidents": "Ver incidentes",
+    "security": "Seguridad",
+    "minuta-virtual": "Minuta Virtual",
+    "parqueaderos": "Parqueaderos",
+    "turnos": "Turnos",
+    "eventos": "Eventos"
+  },
+  "Common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "view": "Ver",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "loading": "Cargando...",
+    "noData": "No hay datos disponibles"
+  }
+}

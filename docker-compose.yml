@@ -1,0 +1,13 @@
+version: '3'
+services:
+  umb-admin:
+    container_name: 'umb-admin'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - '/umb-admin/node_modules'
+    ports:
+      - "3000:3000"
+      

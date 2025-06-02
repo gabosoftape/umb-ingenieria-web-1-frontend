@@ -1,0 +1,200 @@
+/* Estilos específicos para BespokeDashboard */
+/* Reemplazando las clases dashcode-app por bespoke-app */
+
+/* Estilos para mapas */
+.bespoke-app-vmap path {
+  @apply fill-[#6794DC];
+}
+
+.bespoke-app-vmap .svg-map__location[aria-checked="true"] {
+  @apply fill-primary;
+}
+
+.bespoke-app-codeVmapInfo path {
+  @apply fill-info;
+}
+
+.bespoke-app-codeVmapInfo path .svg-map__location[aria-checked="true"] {
+  @apply fill-info;
+}
+
+.bespoke-app-codeVmapWarning path {
+  @apply fill-warning;
+}
+
+.bespoke-app-codeVmapWarning path .svg-map__location[aria-checked="true"] {
+  @apply fill-warning;
+}
+
+.bespoke-app-codeVmapSuccess path {
+  @apply fill-success;
+}
+
+.bespoke-app-codeVmapSuccess path .svg-map__location[aria-checked="true"] {
+  @apply fill-success;
+}
+
+/* Estilos para calendario */
+.bespoke-app-calendar .fc-toolbar-chunk button {
+  @apply border-none shadow-none bg-transparent;
+}
+
+.bespoke-app-calendar .fc-toolbar-chunk button.fc-prev-button {
+  @apply mr-1;
+}
+
+.bespoke-app-calendar .fc-toolbar-chunk button.fc-next-button {
+  @apply ml-1;
+}
+
+.bespoke-app-calendar .fc-button {
+  @apply capitalize text-sm font-medium h-9 px-[10px] leading-[1] focus:ring-0;
+}
+
+.bespoke-app-calendar .fc .fc-button-primary {
+  @apply bg-slate-100 dark:bg-slate-900 border-slate-100 dark:border-slate-900 text-slate-900 dark:text-slate-300;
+}
+
+.bespoke-app-calendar .fc .fc-button-primary.fc-button-active {
+  @apply bg-slate-900 dark:bg-slate-700 border-slate-900 dark:border-slate-700;
+}
+
+.bespoke-app-calendar .fc .fc-button-primary:not(:disabled):active,
+.bespoke-app-calendar .fc .fc-button-primary:not(:disabled).fc-button-active,
+.bespoke-app-calendar .fc .fc-button-primary:hover {
+  @apply bg-slate-900 dark:bg-slate-700 border-slate-900 dark:border-slate-700 text-white shadow-none;
+}
+
+.bespoke-app-calendar .fc .fc-button-primary:disabled {
+  @apply bg-slate-100 dark:bg-slate-700 border-slate-100 dark:border-slate-700 text-slate-300 dark:text-slate-500 cursor-not-allowed;
+}
+
+.bespoke-app-calendar .fc-today-button {
+  @apply text-sm font-medium h-9 leading-[1] bg-slate-900 dark:bg-slate-700 border-slate-900 dark:border-slate-700 text-white shadow-none;
+}
+
+.bespoke-app-calendar .fc .fc-button-primary:focus {
+  @apply shadow-none;
+}
+
+.bespoke-app-calendar .fc-theme-standard .fc-scrollgrid {
+  @apply border-slate-200 dark:border-slate-700;
+}
+
+.bespoke-app-calendar .fc-theme-standard td,
+.bespoke-app-calendar .fc-theme-standard th {
+  @apply border-slate-200 dark:border-slate-700;
+}
+
+.bespoke-app-calendar .fc-col-header-cell .fc-scrollgrid-sync-inner {
+  @apply py-3;
+}
+
+.bespoke-app-calendar .fc-col-header-cell {
+  @apply text-xs font-semibold text-slate-500 dark:text-slate-300;
+}
+
+.bespoke-app-calendar .fc-daygrid-day-top {
+  @apply text-xs font-normal text-slate-400 dark:text-slate-300 p-2;
+}
+
+.bespoke-app-calendar .fc-h-event .fc-event-main-frame {
+  @apply flex items-center;
+}
+
+.bespoke-app-calendar .fc-event-time {
+  @apply text-xs font-normal;
+}
+
+.bespoke-app-calendar .fc-timegrid-event .fc-event-main {
+  @apply p-2;
+}
+
+.bespoke-app-calendar .fc-event-title {
+  @apply text-sm font-light;
+}
+
+.bespoke-app-calendar .fc-timegrid-col-events .fc-event-title {
+  @apply text-xs font-normal;
+}
+
+.bespoke-app-calendar .fc .fc-toolbar-title {
+  @apply text-lg font-medium text-slate-600 dark:text-slate-300;
+}
+
+.bespoke-app .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+  @apply min-h-[2px];
+}
+
+.bespoke-app-calendar .fc-theme-standard .fc-list {
+  @apply border-slate-200 dark:border-slate-700;
+}
+
+.bespoke-app-calendar .fc-daygrid-event-dot {
+  @apply hidden;
+}
+
+.bespoke-app-calendar .fc .fc-list-sticky .fc-list-day>* {
+  @apply bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300;
+}
+
+.bespoke-app-calendar .fc-timegrid-col-events .fc-event-title {
+  @apply text-xs font-normal;
+}
+
+.bespoke-app-calendar .fc-timegrid-event-harness>.fc-timegrid-event {
+  @apply shadow-none;
+}
+
+@media (max-width: 580px) {
+  .bespoke-app-calendar .fc-button-group,
+  .bespoke-app-calendar .fc .fc-toolbar {
+    @apply flex-col gap-2;
+  }
+  .bespoke-app-calendar .fc .fc-toolbar {
+    @apply flex-col gap-3;
+  }
+  .bespoke-app-calendar .fc-toolbar-chunk {
+    @apply flex justify-center;
+  }
+  .bespoke-app-calendar .fc .fc-button {
+    @apply text-[10px] h-7 px-2;
+  }
+}
+
+.bespoke-app-calendar .fc .fc-timegrid-axis-cushion,
+.bespoke-app-calendar .fc .fc-timegrid-slot-label-cushion {
+  @apply text-xs font-normal text-slate-400 dark:text-slate-300;
+}
+
+.bespoke-app-calendar .fc .fc-list-event:hover td {
+  @apply bg-slate-50 dark:bg-slate-700;
+}
+
+.bespoke-app-calendar .fc .fc-list-event-dot {
+  @apply hidden;
+}
+
+.bespoke-app-calendar .fc-direction-ltr .fc-list-day-text,
+.bespoke-app-calendar .fc-direction-rtl .fc-list-day-side-text,
+.bespoke-app-calendar .fc-direction-ltr .fc-list-day-side-text,
+.bespoke-app-calendar .fc-direction-rtl .fc-list-day-text {
+  @apply text-sm font-medium;
+}
+
+.bespoke-app-calendar .fc-list-event-title {
+  @apply text-sm font-normal;
+}
+
+.bespoke-app-calendar .fc-list-event-time {
+  @apply text-sm font-normal;
+}
+
+.bespoke-app-calendar .fc-list-table th {
+  @apply text-xs font-semibold text-slate-400 dark:text-slate-300;
+}
+
+.bespoke-app-calendar .fc-list-table td,
+.bespoke-app-calendar .fc-list-day-cushion {
+  @apply px-4 py-2;
+}
