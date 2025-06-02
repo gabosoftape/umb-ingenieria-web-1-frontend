@@ -10,7 +10,7 @@ export const brandConfig = {
   shortName: "UMB - INGENIERIA WEB",
   
   // URLs
-  url: "https://bespoke-dashboard.com",
+  url: "https://arpadine.com",
   
   // Contacto
   email: "admin@bespoke-dashboard.com",
@@ -18,11 +18,11 @@ export const brandConfig = {
   password: "password", // Contraseña por defecto para ejemplos
   
   // Rutas
-  mainRoute: "/dashboard",
+  mainRoute: "/dashboard/analytics",
   analyticsRoute: "/dashboard/analytics",
   
   // Textos
-  welcomeText: "Welcome to BespokeDashboard",
+  welcomeText: "Welcome to UmbDashboard",
   signInTitle: "Sign in",
   signInText: "Sign in to your account to start using BespokeDashboard",
   signInButtonText: "Sign In",

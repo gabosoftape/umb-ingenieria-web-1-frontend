@@ -20,8 +20,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useRouter } from "@/components/navigation";
 import { startTransition } from "react";
 import { toast } from "sonner";
-import { useAuth } from "@/contexts/auth.context";
 import { APP_ROUTES } from "@/lib/constants";
+import brandConfig from "@/lib/brand";
+import {useAuth} from "@/contexts/auth.context";
 
 // Esquema de validación para el formulario de login
 const loginSchema = z.object({
@@ -64,7 +65,7 @@ export function LoginForm({ locale }: LoginFormProps) {
       toast.success("Inicio de sesión exitoso");
       
       // Redireccionar al dashboard con el locale correcto
-      router.push(`/${APP_ROUTES.DASHBOARD}`);
+      router.push(`${brandConfig.mainRoute}`);
     } catch (err: any) {
       toast.error("Fallaron las credenciales, intente de nuevo", {
         description: err.message || "Verifica tus datos e intentalo nuevamente",

@@ -52,6 +52,8 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation'
 import { getLangDir } from 'rtl-detect';
 import { CSS } from "@dnd-kit/utilities";
+import {DropdownMenuItem} from "@/components/ui/dropdown-menu";
+import LogoutButton from "@/components/auth/logout-button";
 
 export function MenuDragAble() {
     const t = useTranslations("Menu")
@@ -137,16 +139,16 @@ export function MenuDragAble() {
                 >
                     <nav className="h-full w-full">
                         <ul className="h-full flex flex-col min-h-[calc(100vh-48px-36px-16px-32px)] lg:min-h-[calc(100vh-32px-40px-32px)] items-start space-y-1 px-4">
-                            {data?.map(({ groupLabel, menus }, index) => (
+                            {data?.map(({groupLabel, menus}, index) => (
                                 <li className={cn("w-full", groupLabel ? "pt-5" : "")} key={index}>
                                     {(!collapsed && groupLabel) || !collapsed === undefined ? (
-                                        <MenuLabel label={groupLabel} />
+                                        <MenuLabel label={groupLabel}/>
                                     ) : collapsed && !collapsed !== undefined && groupLabel ? (
                                         <TooltipProvider>
                                             <Tooltip delayDuration={100}>
                                                 <TooltipTrigger className="w-full">
                                                     <div className="w-full flex justify-center items-center">
-                                                        <Ellipsis className="h-5 w-5" />
+                                                        <Ellipsis className="h-5 w-5"/>
                                                     </div>
                                                 </TooltipTrigger>
                                                 <TooltipContent side="right">
@@ -155,14 +157,14 @@ export function MenuDragAble() {
                                             </Tooltip>
                                         </TooltipProvider>
                                     ) : (
-                                        <p className="pb-2"> </p>
+                                        <p className="pb-2"></p>
                                     )}
                                     <SortableContext
                                         items={dataIds}
                                         strategy={verticalListSortingStrategy}
                                     >
                                         {menus.map(
-                                            ({ href, label, icon, active, id, submenus }, index) =>
+                                            ({href, label, icon, active, id, submenus}, index) =>
                                                 submenus.length === 0 ? (
                                                     <div className="w-full" key={index}>
                                                         <TooltipProvider disableHoverableContent>
@@ -171,7 +173,9 @@ export function MenuDragAble() {
 
                                                                     <div>
 
-                                                                        <MenuItem label={label} icon={icon} href={href} active={active} id={id} collapsed={collapsed} />
+                                                                        <MenuItem label={label} icon={icon} href={href}
+                                                                                  active={active} id={id}
+                                                                                  collapsed={collapsed}/>
                                                                     </div>
                                                                 </TooltipTrigger>
                                                                 {collapsed && (
@@ -198,11 +202,11 @@ export function MenuDragAble() {
                                     </SortableContext>
                                 </li>
                             ))}
-                            {!collapsed && (
-                                <li className="w-full grow flex items-end">
-                                    <MenuWidget />
-                                </li>
-                            )}
+
+                            <div className="w-full">
+                                <LogoutButton
+                                    className="w-full flex items-center gap-2 justify-start p-0 hover:bg-transparent"/>
+                            </div>
                         </ul>
                     </nav>
                 </DndContext>

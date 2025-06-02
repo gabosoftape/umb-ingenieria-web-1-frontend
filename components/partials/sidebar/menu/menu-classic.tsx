@@ -26,6 +26,7 @@ import SidebarHoverToggle from '@/components/partials/sidebar/sidebar-hover-togg
 import { useMenuHoverConfig } from '@/hooks/use-menu-hover';
 import { useMediaQuery } from '@/hooks/use-media-query';
 import AccountSwitcher from '../common/account-switcher';
+import LogoutButton from "@/components/auth/logout-button";
 
 
 export function MenuClassic({ }) {
@@ -144,11 +145,12 @@ export function MenuClassic({ }) {
 
                             </li>
                         ))}
-                        {!collapsed && (
-                            <li className="w-full grow flex items-end">
-                                <MenuWidget />
-                            </li>
-                        )}
+                        <li className="absolute bottom-4">
+                            <div className="w-full">
+                                <LogoutButton
+                                    className="w-full flex items-center gap-2 justify-start p-0 hover:bg-transparent"/>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
 
