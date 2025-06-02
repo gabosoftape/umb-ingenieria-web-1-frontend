@@ -30,11 +30,12 @@ export default function DashboardPage() {
               <div className="flex justify-center flex-wrap items-center min-h-screen flex-col text-center">
                   <Image height={500} width={500} src="/images/svg/img-2.svg" alt=""/>
                   <h4 className="text-3xl font-medium text-default-900  mb-2">
-                      We are under maintenance.
+                      DUMAR ARTURO PABON ERRIGURE <br/>
+                      Actividad 1 - Ingeniería Web 1.
                   </h4>
                   <p className="font-normal text-base text-default-500 ">
-                      We’re making the system more awesome. <br/>
-                      We’ll be back shortly.
+                      Ingenieria de Software <br/>
+                      Universidad Manuela Beltran
                   </p>
               </div>
           </div>
