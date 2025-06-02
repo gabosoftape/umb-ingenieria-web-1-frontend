@@ -23,10 +23,10 @@ import { toast } from "sonner";
 import { useAuth } from "@/contexts/auth.context";
 import { APP_ROUTES } from "@/lib/constants";
 
-// Esquema de validaciu00f3n para el formulario de login
+// Esquema de validación para el formulario de login
 const loginSchema = z.object({
   email: z.string().email("Ingresa un email vu00e1lido").min(1, "El email es requerido"),
-  password: z.string().min(6, "La contraseu00f1a debe tener al menos 6 caracteres"),
+  password: z.string().min(6, "La contraseuña debe tener al menos 6 caracteres"),
   remember: z.boolean().optional(),
 });
 
@@ -57,11 +57,11 @@ export function LoginForm({ locale }: LoginFormProps) {
   const onSubmit = async (data: LoginFormValues) => {
     setIsLoading(true);
     try {
-      // Usar nuestro contexto de autenticaciu00f3n personalizado
+      // Usar nuestro contexto de autenticación personalizado
       const response = await login(data.email, data.password);
       
       // Si llegamos aqu00ed, el login fue exitoso
-      toast.success("Inicio de sesiu00f3n exitoso");
+      toast.success("Inicio de sesión exitoso");
       
       // Redireccionar al dashboard con el locale correcto
       router.push(`/${APP_ROUTES.DASHBOARD}`);
@@ -104,7 +104,7 @@ export function LoginForm({ locale }: LoginFormProps) {
               <FormControl>
                 <div className="relative">
                   <Input
-                    placeholder="Ingresa tu contraseu00f1a"
+                    placeholder="Ingresa tu contraseña"
                     type={isVisible ? "text" : "password"}
                     {...field}
                     className="border-default-200"
@@ -148,12 +148,12 @@ export function LoginForm({ locale }: LoginFormProps) {
             href={`/${locale}/auth/forgot-password`}
             className="text-sm text-primary-500 hover:text-primary-600"
           >
-            u00bfOlvidaste tu contraseu00f1a?
+            Olvidaste tu contraseña?
           </a>
         </div>
 
         <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Iniciando sesiu00f3n..." : "Iniciar sesiu00f3n"}
+          {isLoading ? "Iniciando sesión..." : "Iniciar sesión"}
         </Button>
       </form>
     </Form>

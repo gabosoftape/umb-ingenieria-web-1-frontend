@@ -19,7 +19,7 @@ COPY .env .
 COPY . .
 
 # Expon el puerto 3000 en el contenedor
-EXPOSE 3000
+EXPOSE 3008
 
 # Comando para iniciar la aplicación
 CMD ["npm", "run", "dev"]

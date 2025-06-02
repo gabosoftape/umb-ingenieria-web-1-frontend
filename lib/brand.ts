@@ -6,8 +6,8 @@
 
 export const brandConfig = {
   // Información básica
-  name: "TriviaBot",
-  shortName: "TriviaBot",
+  name: "UMB - INGENIERIA WEB",
+  shortName: "UMB - INGENIERIA WEB",
   
   // URLs
   url: "https://bespoke-dashboard.com",
@@ -38,7 +38,7 @@ export const brandConfig = {
   appClass: "bespoke-dashboard-app",
   
   // Metadatos
-  metaTitle: "BespokeDashboard - Admin Dashboard",
+  metaTitle: "UMBDashboard - Actividad 1",
   metaDescription: "BespokeDashboard is a modern admin dashboard template",
   
   // Configuración de localización
@@ -56,8 +56,8 @@ export const brandConfig = {
   
   // Redes sociales
   socialLinks: {
-    twitter: "https://twitter.com/bespoke-dashboard",
-    facebook: "https://facebook.com/bespoke-dashboard",
+    twitter: "https://twitter.com/gabriel_pabon_e",
+    facebook: "https://facebook.com/gabriel.pabon.7543",
     instagram: "https://instagram.com/bespoke-dashboard",
     linkedin: "https://linkedin.com/company/bespoke-dashboard",
   }

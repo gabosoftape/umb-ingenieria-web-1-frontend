@@ -52,7 +52,7 @@ const ChangeLogPage = () => {
                   items.map((item, index) => (
                     <AccordionItem
                       value={`value-${index + 1}`}
-                      key={`triviabot-${index}`}
+                      key={`umb-${index}`}
                       className="border-default-100"
                     >
                       <AccordionTrigger>
@@ -99,7 +99,7 @@ const ChangeLogPage = () => {
         <Card>
           <CardHeader>
             <CardTitle>
-              {t("Triviabot")}
+              {t("UMB")}
             </CardTitle>
           </CardHeader>
           <CardContent>
