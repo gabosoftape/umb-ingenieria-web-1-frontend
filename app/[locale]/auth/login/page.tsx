@@ -80,7 +80,7 @@ const Login = ({ params }: { params: Promise<{ locale: string }> }) => {
                 <div className="max-w-[225px] mx-auto font-normal text-default-500  2xl:mt-12 mt-6 uppercase text-sm">
                   ¿No tienes cuenta?
                   <Link
-                    href={`/auth/register`}
+                    href={`/en/auth/register`}
                     className="text-default-900  font-medium hover:underline ml-2"
                   >
                     Regístrate
