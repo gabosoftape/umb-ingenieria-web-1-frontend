@@ -1,10 +1,10 @@
 "use client";
 
-import React from 'react'
+import React, {useState} from 'react'
 import { Ellipsis, LogOut } from "lucide-react";
 import { usePathname } from "@/components/navigation";
 import { cn } from "@/lib/utils";
-import { getMenuList } from "@/lib/menus";
+import {getMenuList, Group} from "@/lib/menus";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
     Tooltip,
@@ -27,6 +27,7 @@ import { useMenuHoverConfig } from '@/hooks/use-menu-hover';
 import { useMediaQuery } from '@/hooks/use-media-query';
 import AccountSwitcher from '../common/account-switcher';
 import LogoutButton from "@/components/auth/logout-button";
+import {useAuth} from "@/contexts/auth.context";
 
 
 export function MenuClassic({ }) {
@@ -40,24 +41,21 @@ export function MenuClassic({ }) {
 
 
     const menuList = getMenuList(pathname, t);
+    const [generalMenuList, setGeneralMenuList] = useState<Group[]>(menuList);
     const [config, setConfig] = useConfig()
     const collapsed = config.collapsed
     const [hoverConfig] = useMenuHoverConfig();
     const { hovered } = hoverConfig;
-
+    const { user } = useAuth();
     const scrollableNodeRef = React.useRef<HTMLDivElement>(null);
     const [scroll, setScroll] = React.useState(false);
 
     React.useEffect(() => {
-        const handleScroll = () => {
-            if (scrollableNodeRef.current && scrollableNodeRef.current.scrollTop > 0) {
-                setScroll(true);
-            } else {
-                setScroll(false);
-            }
-        };
-        scrollableNodeRef.current?.addEventListener("scroll", handleScroll);
-    }, [scrollableNodeRef]);
+        if(user && user.role != 'sa'){
+            menuList[2].menus = menuList[2].menus.filter((m) => m.id != 'master_accounts');
+            setGeneralMenuList(menuList);
+        }
+    }, [user]);
 
     return (
         <>
@@ -86,7 +84,7 @@ export function MenuClassic({ }) {
 
                 <nav className="mt-8 h-full w-full">
                     <ul className=" h-full flex flex-col min-h-[calc(100vh-48px-36px-16px-32px)] lg:min-h-[calc(100vh-32px-40px-32px)] items-start space-y-1 px-4">
-                        {menuList?.map(({ groupLabel, menus }, index) => (
+                        {generalMenuList?.map(({ groupLabel, menus }, index) => (
                             <li className={cn("w-full", groupLabel ? "" : "")} key={index}>
                                 {(!collapsed || hovered) && groupLabel || !collapsed === undefined ? (
                                     <MenuLabel label={groupLabel} />

@@ -31,7 +31,7 @@ export const brandConfig = {
   signUpButtonText: "Sign Up",
   resetPasswordText: "Reset Password with BespokeDashboard",
   resetPasswordButtonText: "Send Recovery Email",
-  copyrightText: (year: number) => `Copyright ${year}, BespokeDashboard All Rights Reserved.`,
+  copyrightText: (year: number) => `Copyright ${year}, DUMAR ARTURO PABON E. All Rights Reserved.`,
   
   // Clases CSS
   cssPrefix: "bespoke-dashboard",
