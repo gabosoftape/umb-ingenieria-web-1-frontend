@@ -75,7 +75,7 @@ const Register = ({ params }: { params: Promise<{ locale: string }> }) => {
                   </div>
                 </div>
                 <div className="max-w-[242px] mx-auto mt-8 w-full">
-                  <Social locale={locale} />
+                  <Social locale={locale} mode="register" />
                 </div>
                 <div className="max-w-[225px] mx-auto font-normal text-default-500  2xl:mt-12 mt-6 uppercase text-sm">
                   ¿Ya tienes cuenta?

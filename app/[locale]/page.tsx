@@ -60,7 +60,7 @@ const Login = async ({ params }: { params: { locale: string } }) => {
                   </div>
                 </div>
                 <div className="max-w-[242px] mx-auto mt-8 w-full">
-                  <Social locale={locale} />
+                  <Social locale={locale} mode="login" />
                 </div>
                 <div className="md:max-w-[345px] mx-auto font-normal text-default-500 mt-12 uppercase text-sm">
                   Don't have an account?{" "}

@@ -9,6 +9,7 @@ import {
     SheetHeader,
     SheetContent,
     SheetTrigger,
+    SheetTitle,
 } from "@/components/ui/sheet";
 import { MenuClassic } from "./menu-classic";
 import BespokeLogoLegacy from "@/components/dascode-logo";
@@ -42,6 +43,7 @@ export function SheetMenu() {
                             {brandConfig.name}
                         </h1>
                     </Link>
+                    <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
                 </SheetHeader>
                 <MenuClassic />
             </SheetContent>

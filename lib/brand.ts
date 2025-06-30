@@ -24,12 +24,12 @@ export const brandConfig = {
   // Textos
   welcomeText: "Welcome to UmbDashboard",
   signInTitle: "Sign in",
-  signInText: "Sign in to your account to start using BespokeDashboard",
+  signInText: "Sign in to your account to start using UMB-DASHBOARD-APP",
   signInButtonText: "Sign In",
   signUpTitle: "Sign up",
-  signUpText: "Create an account to start using BespokeDashboard",
+  signUpText: "Create an account to start using UMB-DASHBOARD-APP",
   signUpButtonText: "Sign Up",
-  resetPasswordText: "Reset Password with BespokeDashboard",
+  resetPasswordText: "Reset Password with UMB-DASHBOARD-APP",
   resetPasswordButtonText: "Send Recovery Email",
   copyrightText: (year: number) => `Copyright ${year}, DUMAR ARTURO PABON E. All Rights Reserved.`,
   
@@ -38,7 +38,7 @@ export const brandConfig = {
   appClass: "bespoke-dashboard-app",
   
   // Metadatos
-  metaTitle: "UMBDashboard - Actividad 1",
+  metaTitle: "UMBDashboard - Actividad Seguridad",
   metaDescription: "BespokeDashboard is a modern admin dashboard template",
   
   // Configuración de localización
@@ -48,8 +48,8 @@ export const brandConfig = {
   
   // Textos para preguntas frecuentes
   faqTexts: {
-    howItWorks: "How does BespokeDashboard work?",
-    whereToLearn: "Where I can learn more about using BespokeDashboard?",
+    howItWorks: "How does UMB-DASHBOARD-APP work?",
+    whereToLearn: "Where I can learn more about using UMB-DASHBOARD-APP?",
     whyImportant: "Why BespokeDashboard is so important?",
     whereToFind: "Where I can find BespokeDashboard?",
   },
