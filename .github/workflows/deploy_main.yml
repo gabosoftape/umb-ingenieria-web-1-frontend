@@ -1,0 +1,31 @@
+name: Build Backend on Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: SSH into server and build
+        env:
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+            cd repos/umb-ingenieria-web-1-frontend
+            git checkout main
+            git switch main
+            git pull
+            docker compose down && docker system prune -a -f
+            docker compose up -d
+            docker restart root-webserver-1
+          EOF
