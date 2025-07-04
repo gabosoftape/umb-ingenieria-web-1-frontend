@@ -15,6 +15,7 @@ import { getMessages } from 'next-intl/server';
 import DirectionProvider from "@/providers/direction-provider";
 import { AuthProvider } from "@/contexts/auth.context";
 import { brandConfig } from "@/lib/brand";
+import { use } from "react";
 
 export const metadata: Metadata = {
   title: brandConfig.metaTitle,
@@ -26,10 +27,10 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }> 
 }>) {
   // Usar await con params para obtener el locale
-  const locale = params.locale;
+  const { locale } = use(params); 
   const messages = await getMessages();
   const direction = getLangDir(locale);
   
