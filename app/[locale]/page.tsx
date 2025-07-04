@@ -23,9 +23,9 @@ const Login = async ({ params }: { params: { locale: string } }) => {
                 <Logo />
               </Link>
               <h4>
-                ACtiviad de Seguridad 
+                Ingenieria Web 1 - UMB
                 <span className="text-default-800 font-bold ms-2">
-                  UMB
+                  Actividad de Seguridad
                 </span>
               </h4>
             </div>
