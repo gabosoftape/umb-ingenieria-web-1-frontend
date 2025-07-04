@@ -29,7 +29,7 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   // Usar await con params para obtener el locale
-  const locale = await params.locale;
+  const locale = params.locale;
   const messages = await getMessages();
   const direction = getLangDir(locale);
   
