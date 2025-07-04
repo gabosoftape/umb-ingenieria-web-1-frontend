@@ -31,7 +31,7 @@ const Login = async ({ params }: { params: { locale: string } }) => {
             </div>
             <div className="absolute left-0 2xl:bottom-[-160px] bottom-[-130px] h-full w-full z-[-1]">
               <Image
-                src="/https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FArchivo%3AEscudo_Universidad_Manuela_Beltr%25C3%25A1n.png&psig=AOvVaw1bzx2GG63rOqHVr8qeXymw&ust=1751689607092000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODA6biuoo4DFQAAAAAdAAAAABAE"
+                src="/images/auth/zorro.svg"
                 alt=""
                 width={300}
                 height={300}
