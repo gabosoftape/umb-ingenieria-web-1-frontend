@@ -5,10 +5,11 @@ import Social from "@/components/partials/auth/social";
 import Copyright from "@/components/partials/auth/copyright";
 import Logo from "@/components/partials/auth/logo";
 import { brandConfig } from '@/lib/brand';
+import { use } from 'react';
 
-const Login = async ({ params }: { params: { locale: string } }) => {
+const Login = async ({ params }: { params: Promise<{ locale: string }> }) => {
   // Usar await con params para obtener el locale
-  const locale = await params.locale;
+  const { locale } = use(params); 
   
   return (
     <>
