@@ -39,7 +39,7 @@ type LoginFormProps = {
 
 export function LoginForm({ locale }: LoginFormProps) {
   const router = useRouter();
-  const { login } = useAuth();
+  const { login, user } = useAuth();
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -65,7 +65,7 @@ export function LoginForm({ locale }: LoginFormProps) {
       toast.success("Inicio de sesión exitoso");
       
       // Redireccionar al dashboard con el locale correcto
-      router.push(`${brandConfig.mainRoute}`);
+      router.push(`/${locale}${brandConfig.mainRoute}`);
     } catch (err: any) {
       toast.error("Fallaron las credenciales, intente de nuevo", {
         description: err.message || "Verifica tus datos e intentalo nuevamente",
@@ -74,6 +74,12 @@ export function LoginForm({ locale }: LoginFormProps) {
       setIsLoading(false);
     }
   };
+
+  React.useEffect(() => {
+    if (user) {
+      router.replace(`/${locale}${brandConfig.mainRoute}`);
+    }
+  }, [user, router, locale]);
 
   return (
     <Form {...form}>
