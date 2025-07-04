@@ -21,7 +21,7 @@ jobs:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-            cd repos/umb-ingenieria-web-1-frontend
+            cd repos/gabo/umb-ingenieria-web-1-frontend
             git checkout main
             git switch main
             git pull
