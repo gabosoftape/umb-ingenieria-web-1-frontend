@@ -4,7 +4,7 @@ import { brandConfig } from "@/lib/brand";
 
 export default async function UserProfilePage() {
   // Obtener el locale de los headers
-  const headersList = headers();
+  const headersList = await headers();
   const locale = headersList.get('X-NEXT-INTL-LOCALE') || brandConfig.defaultLocale;
   
   return (
