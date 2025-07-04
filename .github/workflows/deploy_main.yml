@@ -27,5 +27,5 @@ jobs:
             git pull
             docker compose down && docker system prune -a -f
             docker compose up -d
-            docker restart root-webserver-1
+            systemctl restart nginx
           EOF
