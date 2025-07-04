@@ -1,16 +1,14 @@
 import React from 'react';
-import { CallCenter } from '@/components/dashboard/CallCenter';
-import { VisitorAuth } from '@/components/dashboard/VisitorAuth';
-import { Notifications } from '@/components/dashboard/Notifications';
-import { VoIPCalls } from '@/components/dashboard/VoIPCalls';
 import {Link} from "@/i18n/routing";
 import Logo from "@/components/partials/auth/logo";
 import {Button} from "@/components/ui/button";
 import Image from "next/image";
 import {Icon} from "@/components/ui/icon";
+import { useAuth } from '@/contexts/auth.context';
 
 export default function DashboardPage() {
-  return (
+    const { user } = useAuth();
+    return (
       <div className="min-h-screen">
           <div className="absolute left-0 top-0 w-full">
               <div className="flex flex-wrap justify-between items-center py-6 container">
@@ -27,6 +25,9 @@ export default function DashboardPage() {
               </div>
           </div>
           <div className="container">
+            <div>
+              <h1>Bienvenido {user?.name}</h1>
+            </div>
               <div className="flex justify-center flex-wrap items-center min-h-screen flex-col text-center">
                   <Image height={500} width={500} src="/images/svg/img-2.svg" alt=""/>
                   <h4 className="text-3xl font-medium text-default-900  mb-2">
