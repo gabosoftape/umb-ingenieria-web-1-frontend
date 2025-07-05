@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [selectedAccount, setSelectedAccount] = useState<AccountRequestModel>(
     {
-      id: 0,
+      id: 1,
       name: "",
       domain: "",
       parent_account_id: 0,
