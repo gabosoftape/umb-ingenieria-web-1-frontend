@@ -249,6 +249,7 @@ export default function BlogsPage() {
               <div>
                 <label className="block text-sm font-medium mb-1">Nombre</label>
                 <Input
+                    name={'name'}
                     value={formData.name}
                     onChange={(e) => setFormData(prev => ({
                       ...prev,
@@ -261,6 +262,7 @@ export default function BlogsPage() {
               <div>
                 <label className="block text-sm font-medium mb-1">Description</label>
                 <Input
+                    name={'description'}
                     type="description"
                     value={formData.description}
                     onChange={(e) => setFormData(prev => ({
@@ -273,6 +275,7 @@ export default function BlogsPage() {
               <div>
                 <label className="block text-sm font-medium mb-1">Texto</label>
                 <textarea
+                    name={'text'}
                     value={formData.text}
                     onChange={(e) => setFormData(prev => ({
                       ...prev,
