@@ -240,7 +240,7 @@ export default function BlogsPage() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>
-              {editingBlog ? 'Editar Blog' : 'Crear Nuevo Blog'}
+              {editingBlog ? 'Editar Blog' : 'Nuevo Blog'}
             </DialogTitle>
           </DialogHeader>
 
